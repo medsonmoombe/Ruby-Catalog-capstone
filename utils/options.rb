@@ -27,23 +27,7 @@ class Options
     when '3'
       #   all_music_albums
     when '4'
-    #   all_genres
-    when '5'
-    #   list_game
-    when '6'
-    #   all_authors
-    when '7'
-    #   add_book
-    when '8'
-    #   create_music_album
-    when '9'
-    #   create_genre
-    when '10'
-    #   add_game
-    when '11'
-    #   create_author
-    when '12'
-      # add_label
+      #  all_genres
     end
   end
 end
