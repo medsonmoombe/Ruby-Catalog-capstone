@@ -1,6 +1,5 @@
 require './classes/item'
 
-# rubocop:disable Metrics/CyclomaticComplexity
 class Options
   def show_menu
     puts 'Enter a number to choose an option below: '
@@ -19,7 +18,6 @@ class Options
     puts '13. Quit'
   end
 
-  # rubocop:disable Metrics/MethodLength
   def menu_options
     case option
     when '1'
@@ -48,6 +46,4 @@ class Options
       # add_label
     end
   end
-  # rubocop:enable Metrics/MethodLength
 end
-# rubocop:enable Metrics/CyclomaticComplexity
