@@ -1,11 +1,11 @@
 -- games table
 CREATE TABLE IF NOT EXISTS games (
     id INTEGER PRIMARY KEY,
-    name TEXT,
-    genre TEXT,
-    author TEXT,
-    source TEXT,
-    label TEXT,
+    name VARCHAR(255) NOT NULL,
+    genre VARCHAR(255) NOT NULL,
+    author_id INTEGER, CONSTRAINT fk_author FOREIGN KEY (author_id) REFERENCES author(id) ON DELETE CASCADE
+    source VARCHAR(255) NOT NULL,
+    label VARCHAR(255) NOT NULL,
     published_date DATE,
     archived boolean,
     multiplayer boolean,
@@ -15,5 +15,6 @@ CREATE TABLE IF NOT EXISTS games (
 -- authors table
 CREATE TABLE authors (
     id INTEGER PRIMARY KEY,
-    name TEXT
+    fist_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
 );
