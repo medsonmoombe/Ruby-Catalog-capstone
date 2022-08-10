@@ -1,5 +1,6 @@
 require './utils/options'
 
+# show catalog menu
 class App
   def initialize
     @options = Options.new
@@ -16,6 +17,8 @@ class App
       option = gets.chomp
       exit if option == '13'
       @options.menu_options(option)
+      @options.save_label
+      @options.save_book
     end
     puts 'Bye'
   end
