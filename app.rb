@@ -1,5 +1,6 @@
 require './utils/options'
 
+# show catalog menu
 class App
   def initialize
     @options = Options.new

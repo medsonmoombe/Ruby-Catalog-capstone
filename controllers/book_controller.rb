@@ -2,6 +2,7 @@ require 'json'
 require 'date'
 require_relative '../classes/book'
 
+# Manage list of books
 module BookController
   def add_book
     puts 'publisher'

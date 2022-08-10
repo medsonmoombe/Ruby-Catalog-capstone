@@ -1,6 +1,7 @@
 require 'json'
 require_relative '../classes/label'
 
+# Manage list of labels
 module LabelController
   def add_label
     puts 'Add title: '

@@ -1,3 +1,4 @@
+# Create Label class
 class Label
   attr_accessor :title, :color, :item
 

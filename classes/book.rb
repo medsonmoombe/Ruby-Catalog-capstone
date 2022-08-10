@@ -1,5 +1,6 @@
 require_relative './item'
 
+# Create Book class
 class Book < Item
   attr_accessor :publisher, :cover_state
 
