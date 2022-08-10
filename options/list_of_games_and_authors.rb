@@ -4,10 +4,10 @@ module GameLists
     puts 'Add a game.' if @games.empty?
     @games.each do |game|
       puts "name: #{game.name},
-         published: #{game.published},
-         multiplayer: #{game.multiplayer},
-         last_played_at: #{game.last_played_at},
-          archived: #{game.archived}"
+        published: #{game.published},
+        multiplayer: #{game.multiplayer},
+        last_played_at: #{game.last_played_at},
+        archived: #{game.archived}"
     end
   end
 
