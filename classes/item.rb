@@ -6,7 +6,7 @@ class Item
 
   def initialize(publish_date, archived)
     @id = rand(1..100)
-    @publish_date = Date.parse(publish_date)
+    @publish_date = publish_date
     @archived = archived
     @author = nil
     @genre = nil

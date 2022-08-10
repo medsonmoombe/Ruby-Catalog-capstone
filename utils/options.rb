@@ -1,4 +1,8 @@
+# rubocop:disable Metrics/CyclomaticComplexity
 require './classes/item'
+require './options/list_of_games'
+require './options/list_of_authors'
+require './options/add_game'
 
 class Options
   def show_menu
@@ -28,6 +32,18 @@ class Options
       #   all_music_albums
     when '4'
       #  all_genres
+    when '5'
+      # list_of_games
+    when '6'
+      # list_all_authors
+    when '7'
+      # add_book
+    when '8'
+      # add_music_album
+    when '9'
+      # add_genre
+    when '10'
+      # add_game
     end
   end
 end
