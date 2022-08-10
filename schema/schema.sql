@@ -1,9 +1,15 @@
 -- games table
-CREATE TABLE games (
+CREATE TABLE IF NOT EXISTS games (
     id INTEGER PRIMARY KEY,
     name TEXT,
-    author_id INTEGER,
-    FOREIGN KEY(author_id) REFERENCES author(id)
+    genre TEXT,
+    author TEXT,
+    source TEXT,
+    label TEXT,
+    published_date DATE,
+    archived boolean,
+    multiplayer boolean,
+    last_played_at DATE,
 );
 
 -- authors table
