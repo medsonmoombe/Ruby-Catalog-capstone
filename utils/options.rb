@@ -44,4 +44,5 @@ class Options
       # add_game
     end
   end
+  # rubocop:enable Metrics/CyclomaticComplexity
 end
