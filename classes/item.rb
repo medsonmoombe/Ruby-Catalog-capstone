@@ -10,7 +10,7 @@ class Item
     @archived = archived
     @author = nil
     @genre = nil
-    @label = nil
+    @label = label
   end
 
   def label=(label)

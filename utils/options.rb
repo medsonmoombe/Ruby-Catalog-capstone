@@ -1,6 +1,19 @@
-require './classes/item'
+# rubocop:disable Metrics/CyclomaticComplexity
+require_relative '../classes/item'
+require_relative '../classes/label'
+require_relative '../controllers/book_controller'
+require_relative '../controllers/label_controller'
 
 class Options
+  include BookController
+  include LabelController
+
+  def initialize
+    @items = []
+    @labels = access_label
+    @books = load_book
+  end
+
   def show_menu
     puts 'Enter a number to choose an option below: '
     puts '1. List All Books'
@@ -18,16 +31,35 @@ class Options
     puts '13. Quit'
   end
 
-  def menu_options
+  # rubocop:disable Metrics/MethodLength
+  def menu_options(option)
     case option
     when '1'
-      #   list_book
+      list_book
     when '2'
-      #   list_label
+      list_label
     when '3'
-      #   all_music_albums
+      # all_music_albums
     when '4'
-      #  all_genres
+      # all_genres
+    when '5'
+      # list_game
+    when '6'
+      # all_authors
+    when '7'
+      add_book
+    when '8'
+      # create_music_album
+    when '9'
+      # create_genre
+    when '10'
+      # add_game
+    when '11'
+      # create_author
+    when '12'
+      add_label
     end
   end
+  # rubocop: enable Metrics/MethodLength
 end
+# rubocop: enable Metrics/CyclomaticComplexity
