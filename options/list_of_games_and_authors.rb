@@ -26,8 +26,8 @@ module GameLists
     puts 'Add an author.' if @authors.empty?
     @authors.each do |author|
       puts "name: #{author.first_name} #{author.last_name},
-         id: #{author.id},
-         items: #{author.items}"
+        id: #{author.id},
+        items: #{author.items}"
     end
   end
 end
