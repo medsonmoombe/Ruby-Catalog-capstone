@@ -2,6 +2,7 @@ require 'date'
 require_relative '../classes/book'
 require_relative '../classes/item'
 
+# Book method tests
 describe Book do
   before :each do
     @book = Book.new('Emmanuel', '2020-07-06', 'Good')

@@ -1,8 +1,8 @@
-# label class methods tests
 require_relative '../classes/label'
 require_relative '../classes/book'
 require_relative '../classes/item'
 
+# label class methods tests
 describe Label do
   before :each do
     @label = Label.new('Hello', 'Blue')
