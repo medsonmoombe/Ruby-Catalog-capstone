@@ -1,4 +1,6 @@
 # rubocop:disable Metrics/CyclomaticComplexity
+require './classes/item'
+require './options/list_of_games_and_authors'
 require_relative '../classes/item'
 require_relative '../classes/label'
 require_relative '../controllers/book_controller'
@@ -7,11 +9,14 @@ require_relative '../controllers/label_controller'
 class Options
   include BookController
   include LabelController
+  include List
 
   def initialize
     @items = []
     @labels = access_label
     @books = load_book
+    @games = load_games
+    @authors = load_authors
   end
 
   def show_menu
@@ -40,23 +45,25 @@ class Options
     when '3'
       # all_music_albums
     when '4'
-      # all_genres
+      #  all_genres
     when '5'
-      # list_game
+      list_all_games
     when '6'
-      # all_authors
+      list_all_authors
     when '7'
-      add_book
+      # add_book
     when '8'
-      # create_music_album
+      # add_music_album
     when '9'
-      # create_genre
+      # add_genre
     when '10'
-      # add_game
+      add_game
     when '11'
-      # create_author
+      add_author
     when '12'
-      add_label
+      # add_label
+    when '13'
+      puts 'Goodbye!'
     end
   end
 end
