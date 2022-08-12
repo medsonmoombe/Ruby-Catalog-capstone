@@ -10,7 +10,6 @@ require_relative '../controllers/label_controller'
 require_relative '../controllers/music_album_controller'
 require_relative '../controllers/genre_controller'
 
-
 class Options
   include BookController
   include LabelController
