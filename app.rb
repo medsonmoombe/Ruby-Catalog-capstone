@@ -23,7 +23,8 @@ class App
       @options.save_game
       @options.save_author
       @options.save_label
-      @options.save_book
+      @options.save_music_album
+      @options.save_genre
     end
     puts 'Bye'
   end
