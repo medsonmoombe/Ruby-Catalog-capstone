@@ -1,8 +1,11 @@
 require './utils/options'
+require_relative './options/list_of_games_and_authors'
 
 class App
   def initialize
     @options = Options.new
+    @games = []
+    @authors = []
   end
 
   def run
@@ -16,6 +19,8 @@ class App
       option = gets.chomp
       exit if option == '13'
       @options.menu_options(option)
+      @options.save_game
+      @options.save_author
     end
     puts 'Bye'
   end

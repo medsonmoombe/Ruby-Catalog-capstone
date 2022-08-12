@@ -1,7 +1,5 @@
 # Test for the class game
-require './classes/item'
-require './game'
-require './author'
+require_relative '../classes/game'
 
 describe Game do
   context 'created' do

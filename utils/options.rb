@@ -1,8 +1,16 @@
 # rubocop:disable Metrics/CyclomaticComplexity
 require './classes/item'
-require './options/add_game'
+require './options/list_of_games_and_authors'
 
 class Options
+  include List
+
+  def initialize
+    @items = []
+    @games = load_games
+    @authors = load_authors
+  end
+
   def show_menu
     puts 'Enter a number to choose an option below: '
     puts '1. List All Books'
@@ -20,7 +28,7 @@ class Options
     puts '13. Quit'
   end
 
-  def menu_options
+  def menu_options(option)
     case option
     when '1'
       #   list_book
@@ -31,9 +39,9 @@ class Options
     when '4'
       #  all_genres
     when '5'
-      # list_of_games
+      list_all_games
     when '6'
-      # list_all_authors
+      list_all_authors
     when '7'
       # add_book
     when '8'
@@ -41,7 +49,13 @@ class Options
     when '9'
       # add_genre
     when '10'
-      # add_game
+      add_game
+    when '11'
+      add_author
+    when '12'
+      # add_label
+    when '13'
+      puts 'Goodbye!'
     end
   end
   # rubocop:enable Metrics/CyclomaticComplexity
