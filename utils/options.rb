@@ -60,7 +60,7 @@ class Options
     when '6'
       list_all_authors
     when '7'
-       add_book
+      # add_book
     when '8'
       add_music_album
     when '9'
@@ -70,7 +70,7 @@ class Options
     when '11'
       add_author
     when '12'
-       add_label
+      # add_label
     when '13'
       puts 'Goodbye!'
     end
