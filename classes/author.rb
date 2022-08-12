@@ -1,4 +1,3 @@
-# rubocop:disable Lint/UnusedMethodArgument
 # Create an Author class with an association to the Item class.
 require_relative './item'
 
@@ -24,4 +23,3 @@ class Author
     }
   end
 end
-# rubocop:enable Lint/UnusedMethodArgument
