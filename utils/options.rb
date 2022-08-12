@@ -1,17 +1,23 @@
 # rubocop:disable Metrics/CyclomaticComplexity
 require_relative '../classes/item'
 require_relative '../classes/label'
+require_relative '../classes/music_album'
+# require_relative '../classes/genre'
 require_relative '../controllers/book_controller'
 require_relative '../controllers/label_controller'
+require_relative '../controllers/music_album_controller'
+
 
 class Options
   include BookController
   include LabelController
+  include MusicAlbumsModule
 
   def initialize
     @items = []
     @labels = access_label
     @books = load_book
+    @music_albums = fetch_music_albums
   end
 
   def show_menu
@@ -38,7 +44,7 @@ class Options
     when '2'
       list_label
     when '3'
-      # all_music_albums
+      list_all_music_albums
     when '4'
       # all_genres
     when '5'
@@ -48,7 +54,7 @@ class Options
     when '7'
       add_book
     when '8'
-      # create_music_album
+    create_music_album
     when '9'
       # create_genre
     when '10'
