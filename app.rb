@@ -1,6 +1,7 @@
 require './utils/options'
 require_relative './options/list_of_games_and_authors'
 
+# show catalog menu
 class App
   def initialize
     @options = Options.new
@@ -21,6 +22,8 @@ class App
       @options.menu_options(option)
       @options.save_game
       @options.save_author
+      @options.save_label
+      @options.save_book
     end
     puts 'Bye'
   end
