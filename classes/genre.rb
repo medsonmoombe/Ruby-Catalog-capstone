@@ -11,5 +11,12 @@ class Genre
   def add_item(item)
     @items << item
     item.genre = self
+
+  def to_hash
+    {
+      'id' => @id,
+      'name' => @name,
+      'items' => @items
+    }
   end
 end

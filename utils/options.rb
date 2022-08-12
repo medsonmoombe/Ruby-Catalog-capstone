@@ -7,17 +7,16 @@ require_relative '../controllers/book_controller'
 require_relative '../controllers/label_controller'
 require_relative '../controllers/music_album_controller'
 
-
 class Options
   include BookController
   include LabelController
-  include MusicAlbumsModule
+  include MusicAlbumController
 
   def initialize
     @items = []
     @labels = access_label
     @books = load_book
-    @music_albums = fetch_music_albums
+    @music_albums = load_music_albums
   end
 
   def show_menu
@@ -44,7 +43,7 @@ class Options
     when '2'
       list_label
     when '3'
-      list_all_music_albums
+      list_music_album
     when '4'
       # all_genres
     when '5'
@@ -54,7 +53,7 @@ class Options
     when '7'
       add_book
     when '8'
-    create_music_album
+      add_music_album
     when '9'
       # create_genre
     when '10'

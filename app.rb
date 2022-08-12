@@ -18,7 +18,6 @@ class App
       exit if option == '13'
       @options.menu_options(option)
       @options.save_label
-      @options.save_book
       @options.save_music_album
     end
     puts 'Bye'
