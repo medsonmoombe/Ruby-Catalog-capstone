@@ -11,6 +11,6 @@ class Book < Item
   end
 
   def can_be_archived?
-    true if publish_date > 10 || cover_state == 'bad'
+    true if Date.parse(publish_date) > 10 || cover_state == 'bad'
   end
 end
