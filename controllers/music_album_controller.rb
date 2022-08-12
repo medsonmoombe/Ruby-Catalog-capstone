@@ -32,7 +32,7 @@ module MusicAlbumController
     if File.exist?(music_album_file) && File.read(music_album_file) != ''
       data = music_album_file.read
       JSON.parse(data).each do |music_album|
-        music_album_store.push(music_album.new(music_album['on_spotify'], music_album['publish_date'],
+        music_album_store.push(MusicAlbum.new(music_album['on_spotify'], music_album['publish_date'],
                                                music_album['archived']))
       end
     end
