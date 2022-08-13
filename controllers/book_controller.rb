@@ -12,15 +12,15 @@ module BookController
     puts 'cover status'
     cover_state = gets.chomp
     book = Book.new(publisher, publish_date, cover_state)
-    @items << book
+    @books << book
     puts 'Book successfully added'
   end
 
   def list_book
-    if @items.empty?
+    if @books.empty?
       puts 'No book present yet'
     else
-      @items.each do |book|
+      @books.each do |book|
         puts "publisher: #{book.publisher}, publish date: #{book.publish_date}, cover state: #{book.cover_state} "
       end
     end
@@ -40,7 +40,7 @@ module BookController
 
   def save_book
     data = []
-    @items.each do |book|
+    @books.each do |book|
       data.push({ publisher: book.publisher, cover_state: book.cover_state,
                   publish_date: book.publish_date })
     end

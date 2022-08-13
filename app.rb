@@ -25,6 +25,7 @@ class App
       @options.save_label
       @options.save_music_album
       @options.save_genre
+      @options.save_book
     end
     puts 'Bye'
   end
